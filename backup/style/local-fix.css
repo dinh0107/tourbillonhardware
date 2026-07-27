@@ -1,0 +1,5 @@
+/* Local-only tweaks — original rem/layout CSS untouched */
+
+.index-banner video {
+  object-fit: cover;
+}
