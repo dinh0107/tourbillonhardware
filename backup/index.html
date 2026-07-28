@@ -1020,8 +1020,7 @@
                     <div class="item-wrapper">
                         <div class="left">
                             <div class="t">Contact Us</div>
-                            <div class="s">If you need to join in us, please fill in the following
-                                information. Thank you!</div>
+                            <div class="s">Nếu bạn quan tâm đến việc hợp tác cùng chúng tôi, vui lòng điền đầy đủ thông tin dưới đây. Xin cảm ơn!</div>
                             <div class="circle">
                                 <div class="circle-logo">
                                     <div class="logo"><img src="assets/logo_2.png" alt="" /></div>
@@ -1039,55 +1038,50 @@
                                         </div>
                                     </div>
                                     <div class="circle-text-bottom">
-                                        <div class="tit"><span>The International High-End Brand of
-                                                HIGOLD Group</span></div><br />
+                                        <div class="tit"><span>Thương hiệu nội thất cao cấp quốc tế thuộc Tập đoàn HIGOLD</span></div><br />
                                     </div>
                                 </div>
                             </div>
                             <div class="qrcode-box">
                                 <div class="qrcode"><img src="assets/dafd11ae7ee7eabdbc15d131db102b2a.jpg" alt="" />
                                 </div>
-                                <div class="qrcode-tit">Follow our WeChat Official Service Account</div>
+                                <div class="qrcode-tit">Theo dõi tài khoản WeChat chính thức của chúng tôi</div>
                             </div>
                         </div>
                         <div class="right">
                             <form id="message-form">
-                                <input type="hidden" name="__message_token__"
-                                    value="a7642def89979a5ac36d646102d564a8" /> <input type="hidden" name="__formid__"
-                                    value="1">
-                                <input type="hidden" name="token_name" value="__message_token__">
                                 <div class="input-item">
-                                    <div class="label">Your name</div>
-                                    <input type="text" name="row[name]" placeholder="Please enter your name" required>
+                                    <div class="label">Họ và tên</div>
+                                    <input type="text"  placeholder="Vui lòng nhập họ và tên" required>
                                 </div>
                                 <div class="input-item">
-                                    <div class="label">Phone</div>
-                                    <input type="text" name="row[phone]"
-                                        placeholder="Please enter your mobile phone number" required>
+                                    <div class="label">Số điện thoại</div>
+                                    <input type="text"
+                                        placeholder="Vui lòng nhập số điện thoại" required>
                                 </div>
                                 <div class="input-item">
                                     <div class="label">Email</div>
-                                    <input type="text" name="row[email]" placeholder="Please enter your email address"
+                                    <input type="text" placeholder="Vui lòng nhập địa chỉ email"
                                         required>
                                 </div>
                                 <div class="input-item">
-                                    <div class="label">Investment Area</div>
-                                    <input type="text" name="row[investment_area]" placeholder="Please enter your city"
+                                    <div class="label">Khu vực đầu tư</div>
+                                    <input type="text" placeholder="Vui lòng nhập tỉnh/thành phố"
                                         required>
                                 </div>
                                 <div class="input-item">
-                                    <div class="label">Store Address</div>
-                                    <input type="text" name="row[store_address]"
-                                        placeholder="Please enter the store address">
+                                    <div class="label">Địa chỉ cửa hàng</div>
+                                    <input type="text" 
+                                        placeholder="Vui lòng nhập địa chỉ cửa hàng">
                                 </div>
                                 <div class="input-item">
-                                    <div class="label">Store Area</div>
-                                    <input type="text" name="row[store_area]"
-                                        placeholder="Please enter the store's square footage">
+                                    <div class="label">Diện tích</div>
+                                    <input type="text" 
+                                        placeholder="Vui lòng nhập diện tích cửa hàng (m²)">
                                 </div>
                                 <div class="textarea-item">
-                                    <div class="label">Message</div>
-                                    <textarea name="row[message]" placeholder="Please enter your message"></textarea>
+                                    <div class="label">Tin nhắn</div>
+                                    <textarea placeholder="Vui lòng nhập nội dung"></textarea>
                                 </div>
                                 <button type="submit" id="message-submit">SUBMIT</button>
                             </form>
@@ -1167,18 +1161,10 @@
     </div>
     <script>
         $(function () {
-            // 绑定各个表单
-            bindCaptchaToForm('message-form', 'message-submit', '__message_token__');
-            bindCaptchaToForm('inquiries-form', 'inquiries-submit', '__inquiries_token__');
-        });
-    </script>
-    <script>
-        $(function () {
             indexFun()
         })
     </script>
 
-    <!-- video popup -->
     <div class="video-popup">
         <div class="video-popup-mask">&nbsp;</div>
         <div class="video-popup-box">
@@ -1195,117 +1181,6 @@
         </div>
     </div>
 
-    <script>
-        /**
-         * 通用表单验证 + 腾讯验证码触发函数
-         * @param {string} formId - 表单 ID
-         * @param {string} buttonId - 提交按钮 ID
-         * @param {string} tokenName - 验证码 token 字段名
-         */
-        function bindCaptchaToForm(formId, buttonId, tokenName) {
-            const button = document.getElementById(buttonId);
-            if (!button) return;
-
-            button.onclick = function () {
-                const formObj = document.getElementById(formId);
-                if (!formObj) return;
-
-                let errorMsg = '';
-                Array.from(formObj.elements).forEach(input => {
-                    if (!input.validity.valid && input.validity.valueMissing) {
-                        const label = $(input).siblings().text();
-                        errorMsg = 'Please enter ' + label;
-                    }
-                });
-
-                if (errorMsg) {
-                    new Alert().error({
-                        title: 'Tips',
-                        content: errorMsg,
-                    });
-                    return false;
-                }
-
-                formObj.addEventListener('submit', function (e) {
-                    e.preventDefault();
-                });
-
-                try {
-                    const captcha = new TencentCaptcha(
-                        "198661915",
-                        callback,
-                        {
-                            bizState: {
-                                buttonId: buttonId,
-                                formId: formId,
-                                tokenName: tokenName,
-                            },
-                            userLanguage: 'en-us',
-                            needFeedBack: false,
-                            showFn: (ret) => {
-                                // 可选：记录日志或埋点
-                                console.log('Captcha shown:', ret.duration, ret.sid);
-                            },
-                        }
-                    );
-                    captcha.show();
-                } catch (error) {
-                    loadErrorCallback();
-                }
-            };
-        }
-        // 定义回调函数
-        function callback(res) {
-            if (res.ret === 0) {
-                const { bizState } = res
-                const { formId, buttonId, tokenName } = bizState
-
-                var alert = new Alert()
-                let data = new FormData(document.querySelector('#' + formId));
-                // 验证码信息
-                data.append('captcha_randstr', res.randstr)
-                data.append('captcha_ticket', res.ticket)
-
-                $.ajax({
-                    type: 'post',
-                    url: '/diyform/post',
-                    data: data,
-                    contentType: false,
-                    processData: false,
-                    success: function (result) {
-                        if (result.code === 1) {
-                            alert.success({
-                                title: 'Tips',
-                                content: result.msg,
-                                onClose: function (e) {
-                                    window.location.reload();
-                                    return false;
-                                }
-                            })
-                        } else {
-                            $('input[name="' + tokenName + '"]').val(result['data'][tokenName]);
-                            alert.error({
-                                title: 'Tips',
-                                content: result.msg,
-                            });
-                            return false;
-                        }
-                        return false;
-                    }
-                })
-                return false;
-            }
-        }
-
-        // 定义验证码js加载错误处理函数
-        function loadErrorCallback() {
-            var alert = new Alert()
-            alert.error({
-                title: 'Tips',
-                content: 'System error, please contact administrator',
-            });
-        }
-    </script>
     <script src="js/orig-script.js"></script>
 </body>
 
