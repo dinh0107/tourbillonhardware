@@ -77,7 +77,7 @@ function indexFun() {
       noSwiping: !0,
       noSwipingClass: "swiper-no-swiping",
       resistanceRatio: 0,
-      parallax: !o,
+      parallax: !0,
       on: {
         slideChange: function () {
           var e = this.activeIndex;
