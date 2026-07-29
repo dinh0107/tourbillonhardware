@@ -12008,6 +12008,7 @@ footer .site-footer__bottom .scroll-top i {
 
 .home-hero .swiper-container .swiper-slide img {
   width: 100%;
+  height: 100%;
   display: block;
 }
 
@@ -12277,18 +12278,14 @@ footer .site-footer__bottom .scroll-top i {
 
 .home-products__layout .col-main .media-box {
   position: relative;
-  padding-bottom: 92.0598388953%;
   overflow: hidden
 }
 
 .home-products__layout .col-main .media-box img {
-  position: absolute;
+  position: relative;
+  display: block;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: auto;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   transition: 0.4s
@@ -12349,18 +12346,14 @@ footer .site-footer__bottom .scroll-top i {
 .home-products__layout .col-side .home-products__visual .media-box {
   margin-top: 0.225rem;
   position: relative;
-  padding-bottom: 133.3333333333%;
   overflow: hidden
 }
 
 .home-products__layout .col-side .home-products__visual .media-box img {
-  position: absolute;
+  position: relative;
+  display: block;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: auto;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   transition: 0.4s
@@ -13071,18 +13064,14 @@ footer .site-footer__bottom .scroll-top i {
 
 .home-news__list .list-item .media-box {
   position: relative;
-  padding-bottom: 57.619047619%;
   overflow: hidden
 }
 
 .home-news__list .list-item .media-box img {
-  position: absolute;
+  position: relative;
+  display: block;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: auto;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   transition: 0.4s
@@ -13091,18 +13080,14 @@ footer .site-footer__bottom .scroll-top i {
 @media (max-width: 1024px) {
   .home-news__list .list-item .media-box {
     position: relative;
-    padding-bottom: 57.6470588235%;
     overflow: hidden
   }
 
   .home-news__list .list-item .media-box img {
-    position: absolute;
+    position: relative;
+    display: block;
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    -o-object-fit: cover;
-    object-fit: cover;
+    height: auto;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
     transition: 0.4s
@@ -13829,18 +13814,14 @@ footer .site-footer__bottom .scroll-top i {
 
 .product-list-wrapper .col-side .product-album .img {
   position: relative;
-  padding-bottom: 64.5833333333%;
   overflow: hidden
 }
 
 .product-list-wrapper .col-side .product-album .img img {
-  position: absolute;
+  position: relative;
+  display: block;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: auto;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   transition: 0.4s
@@ -13951,18 +13932,14 @@ footer .site-footer__bottom .scroll-top i {
 .product-list-wrapper .col-side .product-thumb .img {
   width: 1.315rem;
   position: relative;
-  padding-bottom: 64.63878327%;
   overflow: hidden
 }
 
 .product-list-wrapper .col-side .product-thumb .img img {
-  position: absolute;
+  position: relative;
+  display: block;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: auto;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   transition: 0.4s
@@ -14873,19 +14850,15 @@ footer .site-footer__bottom .scroll-top i {
 .about .section-5 .case-list .list-item .img {
   position: relative;
   width: 100%;
-  height: 1.38rem;
   overflow: hidden;
   background-color: #d9d9d9
 }
 
 .about .section-5 .case-list .list-item .img img {
-  position: absolute;
+  position: relative;
+  display: block;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: auto;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   transition: 0.4s
@@ -14916,10 +14889,6 @@ footer .site-footer__bottom .scroll-top i {
 }
 
 @media (max-width: 1024px) {
-  .about .section-5 .case-list .list-item .img {
-    height: 2.2rem
-  }
-
   .about .section-5 .case-list .list-item .copy .heading {
     height: auto;
     font-size: 0.14rem;
