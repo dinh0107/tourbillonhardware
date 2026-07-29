@@ -16508,9 +16508,9 @@ footer .site-footer__bottom .scroll-top i {
   gap: 0.11rem;
   position: relative
 }
-/* .home-footer__contact{
-  height: 100vh;
-} */
+.home-footer__contact{
+  height: 100%;
+}
 .catelog-item-content-wrapper li .download-item .section-title span {
   font-size: 0.095rem;
   color: #585553;
@@ -18069,6 +18069,10 @@ footer .site-footer__bottom .scroll-top i {
   width: 100%;
   max-width: 4rem
 }
+.product-view__panel img{
+  max-width: 100%;
+  height: auto;
+}
 
 .product-view__panel.on {
   display: block
@@ -18085,7 +18089,7 @@ footer .site-footer__bottom .scroll-top i {
 
 .product-view__body-list {
   margin: 0 0 0.08rem;
-  padding-left: 0.12rem;
+  padding: 0;
   list-style: disc;
   color: #1c1c1c;
   font-size: 0.08rem;
@@ -18141,19 +18145,19 @@ footer .site-footer__bottom .scroll-top i {
   }
 
   .product-view__title {
-    font-size: 0.2rem;
+    font-size: 18px;
     line-height: 0.28rem
   }
 
   .product-view__sku {
-    font-size: 0.14rem;
+    font-size: 0.11rem;
     line-height: 0.22rem;
     padding: 0.04rem 0.12rem
   }
 
   .product-view__spec-label,
   .product-view__spec-value {
-    font-size: 0.13rem;
+    font-size: 0.11rem;
     line-height: 0.2rem
   }
 
@@ -18164,12 +18168,15 @@ footer .site-footer__bottom .scroll-top i {
   }
 
   .product-view__spec-price {
-    font-size: 0.16rem;
+    font-size: 0.14rem;
     line-height: 0.24rem
   }
 
   .product-view__btn {
-    font-size: 0.13rem;
+    font-size: 12px;
+    height: 0.26rem;
+    font-weight: 400;
+    font-family: inherit;
     line-height: 0.2rem;
     padding: 0.08rem 0.16rem
   }
@@ -18212,6 +18219,5 @@ footer .site-footer__bottom .scroll-top i {
   .product-view__body-list {
     font-size: 0.14rem;
     line-height: 0.22rem;
-    padding-left: 0.2rem
   }
 }
