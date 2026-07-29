@@ -23,6 +23,18 @@ $(function () {
     productCatelogFun();
   }
 
+  if (typeof productListFun === "function" && document.querySelector(".product-list")) {
+    productListFun();
+  }
+
+  if (typeof productCenterFun === "function" && document.querySelector(".product-center")) {
+    productCenterFun();
+  }
+
+  if (typeof productViewFun === "function" && document.querySelector(".product-view")) {
+    productViewFun();
+  }
+
   if (
     typeof iframeEvent === "function" &&
     document.querySelector(".catelog-item-content-video .video-item")
