@@ -7409,6 +7409,12 @@ button.swiper-pagination-bullet {
   font-display: swap
 }
 
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url(../font/Montserrat-SemiBold.otf);
+  font-display: swap
+}
+
 * {
   outline: none
 }
@@ -10429,21 +10435,9 @@ footer .site-footer__bottom .scroll-top i {
 .link-more {
   width: 0.7rem;
   height: 0.22rem;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   border: 0.01rem solid #fff;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   color: #fff;
   font-size: 0.08rem;
@@ -10683,7 +10677,8 @@ footer .site-footer__bottom .scroll-top i {
   color: #736f6c;
   -webkit-transition: 0.6s;
   -moz-transition: 0.6s;
-  transition: 0.6s
+  transition: 0.6s;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1024px) {
@@ -16646,14 +16641,11 @@ footer .site-footer__bottom .scroll-top i {
 }
 
 .catelog-item-content-catalog .catalog-item__title {
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -ms-flex: 1 0 0%;
-  flex: 1 0 0%;
+  flex: 1 0 0;
   min-width: 0;
-  font-family: "Montserrat-Medium", "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 0.085rem;
+  font-size: 0.09rem;
+  font-family: "Montserrat-Medium";
+  color: #5e5b59;
   line-height: 0.13rem;
   color: #1c1c1c;
   word-break: break-word;
@@ -17746,7 +17738,7 @@ footer .site-footer__bottom .scroll-top i {
 }
 
 .product-view__series {
-  font-family: "Montserrat-Medium", sans-serif;
+  font-family: "Montserrat-SemiBold", sans-serif;
   font-size: 0.06rem;
   line-height: 0.1rem;
   color: #b3a797;
@@ -17755,7 +17747,7 @@ footer .site-footer__bottom .scroll-top i {
 
 .product-view__title {
   margin: 0;
-  font-family: "Montserrat-Medium", sans-serif;
+  font-family: "Montserrat-SemiBold", sans-serif;
   font-size: 0.12rem;
   line-height: 0.16rem;
   color: #585553;
@@ -17859,9 +17851,6 @@ footer .site-footer__bottom .scroll-top i {
 }
 
 .product-view__actions {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 0.04rem;
   -webkit-box-align: center;
@@ -17876,6 +17865,7 @@ footer .site-footer__bottom .scroll-top i {
 .product-view__actions .link-more{
   border: 1px solid #b3a797;
   color: #b3a797;
+  font-family: "Montserrat-SemiBold";
 }
 
 
@@ -17883,25 +17873,17 @@ footer .site-footer__bottom .scroll-top i {
   color: #fff;
 }
 .product-view__btn {
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 0.045rem 0.12rem;
-  font-size: 0.07rem;
+  font-size: 0.08rem;
   line-height: 0.11rem;
   height: 0.22rem;
-  font-family: "Montserrat-Medium", sans-serif;
+  font-family: "Montserrat-SemiBold";
   border: 1px solid #b3a797;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
   transition: 0.3s
 }
 
@@ -17925,8 +17907,8 @@ footer .site-footer__bottom .scroll-top i {
 }
 
 .product-view__btn strong {
-  font-family: "Montserrat-Bold", sans-serif;
-  font-weight: 700
+  font-family: "Montserrat-Bold";
+  font-weight: normal
 }
 
 .product-view__thumbs {
@@ -18145,10 +18127,9 @@ footer .site-footer__bottom .scroll-top i {
   }
 
   .product-view__btn {
-    font-size: 12px;
+    font-size: 0.12rem;
     height: 0.26rem;
-    font-weight: 400;
-    font-family: inherit;
+    font-family: "Montserrat-SemiBold";
     line-height: 0.2rem;
     padding: 0.08rem 0.16rem
   }
