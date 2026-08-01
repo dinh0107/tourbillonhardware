@@ -428,6 +428,8 @@ $(function () {
     }),
     e
       ? (initMobileNav(),
+        document.getElementById("indexSwiper") ||
+          $("header").addClass("active"),
         0 !== (e = document.querySelectorAll(".mobile-nav__child")).length &&
           (e.forEach(function (e) {
             return (e.style.width = "");
@@ -445,8 +447,11 @@ $(function () {
             $(this).addClass("active");
           })
           .on("mouseleave", function () {
-            $(this).removeClass("active");
+            document.getElementById("indexSwiper") &&
+              $(this).removeClass("active");
           }),
+        document.getElementById("indexSwiper") ||
+          $("header").addClass("active"),
         $(".site-header__nav .site-nav__item").hover(
           function () {
             $(this).find(".site-nav__dropdown").stop(!0).slideDown();
@@ -460,10 +465,17 @@ $(function () {
         (i = o.outerHeight()),
         $(window).scroll(function () {
           var e;
-          $("header").hasClass("site-header") ||
-            ((e = $(this).scrollTop()),
-            n < e ? i < e && o.addClass("hidden") : o.removeClass("hidden"),
-            (n = e));
+          if (document.getElementById("indexSwiper")) return;
+          e = $(this).scrollTop();
+          if (n < e) {
+            i < e && o.addClass("hidden");
+          } else {
+            o.removeClass("hidden");
+          }
+          // mini trước, hidden sau — tránh thu padding + trượt header cùng lúc
+          if (40 < e) o.addClass("mini");
+          else o.removeClass("mini");
+          n = e;
         })));
 });
 
